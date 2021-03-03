@@ -34,14 +34,28 @@
     define('DEFAULT_ACTION', 'index');
 
     //---------------------------- Định nghĩa tham số DATABASE ----------------------------//
+    // for developer 
+    // // host đang thao tác
+    // define('DB_HOST', 'localhost');
+    // // Username phpMyAdmin
+    // define('DB_USERS', 'root');
+    // // Password phpMyAdmin
+    // define('DB_PASS', '');
+    // // Database muốn connect
+    // define('DB_NAME', 'book_store');
+    // // Table muốn thao tác
+    // define('DB_TABLE', '`user`');
+
     // host đang thao tác
-    define('DB_HOST', 'localhost');
+    define('DB_HOST', 'remotemysql.com');
     // Username phpMyAdmin
-    define('DB_USERS', 'root');
+    define('DB_USERS', 'KAIyqaosbq');
     // Password phpMyAdmin
-    define('DB_PASS', '');
+    define('DB_PASS', 'RC21qltEfk');
     // Database muốn connect
-    define('DB_NAME', 'book_store');
+    define('DB_NAME', 'KAIyqaosbq');
+    // Port muốn connect
+    define('DB_POST', '3306');
     // Table muốn thao tác
     define('DB_TABLE', '`user`');
 
