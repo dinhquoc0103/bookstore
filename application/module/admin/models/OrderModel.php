@@ -76,7 +76,10 @@
                 if(!empty($sortBy)){
                     $sortBy = explode('-', $sortBy);
                     $sql[] = "ORDER BY $sortBy[1] $sortBy[0]";
-                } 
+                }
+                else{
+                    $sql[] = "ORDER BY id DESC";
+                }
             }
 
 

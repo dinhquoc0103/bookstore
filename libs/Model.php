@@ -77,7 +77,7 @@
                 case '1_row':
                     $arrColumn = $this->strParamInsert($data);
 
-                    $sql = "INSERT INTO ".$this->connectParams['table']."(".$arrColumn['column'].") VALUES(".$arrColumn['value'].")";
+                    $sql = "INSERT INTO ".$this->connectParams['table']."(".$arrColumn['column'].") VALUES(".$arrColumn['value'].")  ";
                     $result = $this->query($sql);
                     $this->checkQuery($result);
 
@@ -88,7 +88,7 @@
                     foreach($data as $item){
                         $arrColumn = $this->strParamInsert($item);
 
-                        echo $sql = "INSERT INTO ".$this->connectParams['table']."(".$arrColumn['column'].") VALUES(".$arrColumn['value'].")"; die();
+                        $sql = "INSERT INTO ".$this->connectParams['table']."(".$arrColumn['column'].") VALUES(".$arrColumn['value'].")  ";
                         $result = $this->query($sql);
                         $this->checkQuery($result);
 
