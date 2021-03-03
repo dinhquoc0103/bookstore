@@ -127,7 +127,7 @@
                         $email = new Email();
                         $contentEmail = $email->createEmailOrderHtml($orderObj, $orderDetailObj);
                         $email->sendMail(
-                            'quocle0103@gmail.com',
+                            'dinhquoc0103@gmail.com',
                             'Q01657658847',
                             $this->_arrParams['form']['email'],
                             $this->_arrParams['form']['fullname'],
