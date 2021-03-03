@@ -16,7 +16,7 @@ $(document).ready(function(){
             page = arrVal[2];
     
             dataSend = {'sort_by':sortBy, 'category_id':categoryId, 'page':page};
-            link = 'index.php?module=site&controller=book&action=ajaxSortByList';
+            link = 'https://bookkg.herokuapp.com/index.php?module=site&controller=book&action=ajaxSortByList';
             $.get(link, dataSend, function(data, textStatus){
                 $(".list-product").html(data);
             });
@@ -28,7 +28,7 @@ $(document).ready(function(){
         // alert(1);
         id = $(this).data("id"); // Lấy id book
         price = $(this).data("price"); 
-        link = 'index.php?module=site&controller=cart&action=addToCart';
+        link = 'https://bookkg.herokuapp.com/index.php?module=site&controller=cart&action=addToCart';
         dataSend = {'book_id':id, 'price':price};
         $.post(link, dataSend, function(data){
             $(".text-number").text(data.totalProduct);
@@ -42,7 +42,7 @@ $(document).ready(function(){
 
     $(".remove-item-in-cart").click(function(){
         id = $(this).data("id"); // Lấy id book
-        link = 'index.php?module=site&controller=cart&action=remove';
+        link = 'https://bookkg.herokuapp.com/index.php?module=site&controller=cart&action=remove';
         dataSend = {'book_id':id};
         $.post(link, dataSend, function(data){
             $(".book-"+data.bookId).hide();
@@ -71,7 +71,7 @@ $(document).ready(function(){
             keyword = $("#form-search .keyword").val();
             keyword = keyword.split(' ');
             keyword = keyword.join('+');         
-            window.location.replace('search/keyword='+keyword);          
+            window.location.replace('https://bookkg.herokuapp.com/search/keyword='+keyword);          
             e.preventDefault(); 
 
         });
@@ -90,7 +90,7 @@ $(document).ready(function(){
             // else{
             //     window.location.replace('/bookstore/search/keyword='+keyword);
             // }
-            window.location.replace('search/keyword='+keyword);
+            window.location.replace('https://bookkg.herokuapp.com/search/keyword='+keyword);
              
             e.preventDefault(); 
 
