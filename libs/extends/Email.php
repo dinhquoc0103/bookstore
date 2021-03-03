@@ -84,7 +84,7 @@
 
                 // thiết lập thông tin người gữi và email người gữi
                 // setFrom(email_ng_gữi, tên_ng_gữi, mặc_định_true_ko_cần_q/tam);
-                $mail->setFrom('quocle0103@gmail.com', 'ldq');
+                $mail->setFrom($emailSend, 'ldq');
 
                 // thiết lập thông tin người nhận và email người nhận
                 // addAddress(email_ng_nhận, tên_ng_nhận);
