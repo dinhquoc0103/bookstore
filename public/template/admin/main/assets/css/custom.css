@@ -1,0 +1,92 @@
+.select-box-filter{
+    margin-bottom: 1.25em;
+}
+.btn-search, .btn-clear{
+    margin-top: 1em;
+    padding: 5px 15px  !important;
+}
+.search-in-table .float-label{
+    left: 16px;
+}
+
+.input-sort-order{
+    height: 22px !important;
+    border: 1px solid #ccc !important;
+}
+
+.card .card-header .card-header-right {
+    right: 0;
+    top: 0;
+    display: block;
+    float: none;
+    position: static;
+}
+
+.card .card-header .card-header-right .card-option{
+    height: 35px;
+    display: flex;
+}
+
+.card .card-header .card-header-right i{
+    font-size: 18px;
+}
+
+.card-header-right .fa-plus-circle{
+    color: #FFC00F  !important;
+}
+
+.fa-check-circle{
+    color: #539A01  !important;
+}
+
+.fa-times-circle{
+    color: #EB451B  !important;
+}
+
+.card-header-right .fa-check{
+    color: #F69626  !important;
+}
+
+.card-header-right .fa-trash{
+    color: #43B4E7  !important;
+}
+
+.card-header-right .fa-floppy-o{
+    color: #696A6D  !important;
+}
+
+.card-header-right .fa-window-close{
+    color: #EB451B  !important;
+}
+
+.card .card-header{
+    padding-bottom: 0px !important;
+}
+
+td .fa-check-circle, td .fa-times-circle{
+    font-size: 18px;
+}
+
+.container-pagination{
+    text-align: center;
+}
+
+.container-pagination ul.pagination{
+    display: inline-block;
+}
+
+.active-pagination-admin{
+    background: rgb(157, 172, 199) !important;
+}
+
+li.page-item span.page-link:hover{
+    color: #455a64 !important;
+}
+
+/* table {
+    table-layout: fixed;
+} */
+table td.name{
+    white-space: pre-wrap !important;
+    width: 20% !important;
+}

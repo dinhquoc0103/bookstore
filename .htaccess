@@ -1,0 +1,50 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+
+
+RewriteRule     "^admin/([a-z]+)(/?)$"     index.php?module=admin&controller=$1&action=index
+RewriteRule     "^admin/([a-z]+)/page-([0-9]+)$"     index.php?module=admin&controller=$1&action=index&page=$2
+
+RewriteRule     "^admin/([a-z]+)/([A-Za-z]+)(/?)$"     index.php?module=admin&controller=$1&action=$2
+
+RewriteRule     "^admin/([a-z]+)/([A-Za-z]+)/(0|1)(/?)$"     index.php?module=admin&controller=$1&action=$2&status=$3
+
+RewriteRule     "^admin/([a-z]+)/([A-Za-z]+)/([a-z_-]+)-([1-9]+)(/?)$"     index.php?module=admin&controller=$1&action=$2&$3=$4
+
+
+RewriteRule     "^home(/?)$"     index.php?module=site&controller=index&action=index
+RewriteRule     "^login(/?)$"     index.php?module=site&controller=index&action=login
+RewriteRule     "^register(/?)$"     index.php?module=site&controller=index&action=register
+
+RewriteRule     "^home/([A-Za-z]+)(/?)$"     index.php?module=site&controller=index&action=$1
+
+RewriteRule     "^notification/([A-Za-z_-]+)(/?)$"     index.php?module=site&controller=index&action=notification&type=$1
+
+
+RewriteRule     "^home/([A-Za-z]+)/userId-([1-9]+)/activeCode-([A-Za-z0-9]+)(/?)$"     index.php?module=site&controller=index&action=$1&user_id=$2&active_code=$3
+
+RewriteRule     "^list/([A-Za-z0-9_-]+)-([1-9]+)(/?)$"     index.php?module=site&controller=book&action=list&category_id=$2
+RewriteRule     "^list/([A-Za-z0-9_-]+)-([1-9]+)/page-([1-9]+)(/?)$"     index.php?module=site&controller=book&action=list&category_id=$2&page=$3
+
+RewriteRule     "^error(/?)$"     index.php?module=site&controller=error&action=index
+
+RewriteRule     "^product/([A-Za-z0-9_-]+)-([1-9]+)(/?)$"     index.php?module=site&controller=book&action=detail&book_id=$2
+
+RewriteRule     "^cart(/?)$"     index.php?module=site&controller=cart&action=index
+RewriteRule     "^search/keyword=([A-Za-z0-9\+\S]+)(/?)$"     index.php?module=site&controller=index&action=search&keyword=$1
+RewriteRule     "^search/page-([1-9]+)/keyword=([A-Za-z0-9\+\S]+)(/?)$"     index.php?module=site&controller=index&action=search&page=$1&keyword=$2
+
+RewriteRule     "^check-out(/?)$"     index.php?module=site&controller=cart&action=checkOut
+RewriteRule     "^order-complete(/?)$"     index.php?module=site&controller=cart&action=orderComplete
+
+ErrorDocument 404 http://localhost:8000/bookstore/
+
+
+
+
+
+
+
