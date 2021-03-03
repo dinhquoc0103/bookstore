@@ -25,10 +25,10 @@ $(document).ready(function(){
 
 
     $(".addToCart").click(function(){
-        alert(1);
+        // alert(1);
         id = $(this).data("id"); // Lấy id book
         price = $(this).data("price"); 
-        link = 'https://bookkg.herokuapp.com/index.php?module=site&controller=cart&action=addToCart';
+        link = 'index.php?module=site&controller=cart&action=addToCart';
         dataSend = {'book_id':id, 'price':price};
         $.post(link, dataSend, function(data){
             $(".text-number").text(data.totalProduct);
