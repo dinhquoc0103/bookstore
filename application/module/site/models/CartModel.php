@@ -43,7 +43,8 @@
                     $typeInsert = '1_row';
                     $this->insert($data, $typeInsert);
 
-                    $orderId = $this->lastRowID(); // Lấy id đơn hàng vừa đặt
+                    echo $orderId = $this->lastRowID(); // Lấy id đơn hàng vừa đặt 
+                    die();
 
                     // Insert các sản phẩm trong đơn hàng vào order_detail
                     $arrItemInOrder = $this->listItemsInCart($arrParams);
