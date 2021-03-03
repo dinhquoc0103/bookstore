@@ -20,7 +20,7 @@
 
     //---------------------------- Định nghĩa URL tương đối cho CSS và JS ----------------------------//
     // Tương đối là từ thư mục chứa dự án .. chứ không xuất phát từ ổ đĩa chứa tất cả các file
-    define('ROOT_URL', DS . 'bookstore' . DS);
+    define('ROOT_URL', 'https://bookkg.herokuapp.com' . DS);
     define('PUBLIC_URL', ROOT_URL . 'public' . DS);
     define('TEMPLATE_URL', PUBLIC_URL . 'template' . DS);
     define('APPLICATION_URL', ROOT_URL . 'application' . DS);
