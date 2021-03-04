@@ -99,7 +99,7 @@ $(document).ready(function(){
     $(".order-status").change(function(){
         var id = $(this).data("id");
         var status = $(this).val();
-        $("#adminForm").attr('action', '/bookstore/index.php?module=admin&controller=order&action=changeOrderStatus&order_status='+status+'&id='+id);
+        $("#adminForm").attr('action', 'https://bookkg.herokuapp.com/index.php?module=admin&controller=order&action=changeOrderStatus&order_status='+status+'&id='+id);
         $("#adminForm").submit();
     });
 
