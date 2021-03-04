@@ -12,7 +12,7 @@ RewriteRule     "^admin/([a-z]+)/([A-Za-z]+)(/?)$"     index.php?module=admin&co
 
 RewriteRule     "^admin/([a-z]+)/([A-Za-z]+)/(0|1)(/?)$"     index.php?module=admin&controller=$1&action=$2&status=$3
 
-RewriteRule     "^admin/([a-z]+)/([A-Za-z]+)/([a-z_-]+)-([1-9]+)(/?)$"     index.php?module=admin&controller=$1&action=$2&$3=$4
+RewriteRule     "^admin/([a-z]+)/([A-Za-z]+)/([a-z_-]+)-([0-9]+)(/?)$"     index.php?module=admin&controller=$1&action=$2&$3=$4
 
 
 RewriteRule     "^home(/?)$"     index.php?module=site&controller=index&action=index
