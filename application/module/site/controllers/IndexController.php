@@ -43,16 +43,17 @@
                         require_once $path;
                         $email = new Email();
                         // index.php?module=site&controller=index&action=active&user_id=5&active_code=xxxdfdf2232
-                        $linkActive= "home/active/userId-$idInsert/activeCode-".$this->_arrParams['form']['active_code'] ; 
+                        $linkActive= "https://bookkg.herokuapp.com/home/active/userId-$idInsert/activeCode-".$this->_arrParams['form']['active_code'] ; 
                         $linkActive= Url::createLink(
                             null, null, null, null, $linkActive
                         ) ; 
                         $contentRegister = $email->createEmailRegisterHtml($linkActive);
                         $email->sendMail(
-                            'quocle0103@gmail.com',
-                            'Q01657658847',
+                            'dinhquoc0103@gmail.com',
+                            'bookstore',
                             $this->_arrParams['form']['email'],
                             $this->_arrParams['form']['fullname'],
+                            'Đăng Ký Tài Khoản Thành Công',
                             $contentRegister
                         );
                     }

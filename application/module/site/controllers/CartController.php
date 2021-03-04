@@ -127,10 +127,11 @@
                         $email = new Email();
                         $contentEmail = $email->createEmailOrderHtml($orderObj, $orderDetailObj);
                         $email->sendMail(
-                            'quocle0103@gmail.com',
-                            'Q01657658847',
+                            'dinhquoc0103@gmail.com',
+                            'bookstore',
                             $this->_arrParams['form']['email'],
                             $this->_arrParams['form']['fullname'],
+                            'Đặt Hàng Thành Công',
                             $contentEmail
                         );
                     }

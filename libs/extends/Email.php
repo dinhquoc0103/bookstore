@@ -1,6 +1,6 @@
 <?php
     
-    use PHPMailer\PHPMailer\PHPMailer;
+    // use PHPMailer\PHPMailer\PHPMailer;
     class Email {
 
         public function createEmailRegisterHtml($linkActive = 'https://www.youtube.com/?gl=VN'){
@@ -59,7 +59,32 @@
                     '.$order_note;
         }
 
-        public function sendMail($emailSend, $passSend, $emailReceive, $nameReceive, $emailContent){
+        public function sendMail($emailSend, $nameSend, $emailReceive, $nameReceive, $subject, $content){
+            require CORE_PATH . 'sendGrid/vendor/autoload.php';
+            $email = new \SendGrid\Mail\Mail();                 // Tạo đối tượng email
+            $email->setFrom($emailSend, $nameSend);             // Gửi mail từ
+            $email->setSubject($subject);                       // Tiêu đề email
+            $email->addTo($emailReceive, $nameReceive);         // Gửi đến
+            $email->addContent("text/html", $content);          // Nội dụng email
+
+            $sendgrid = new \SendGrid(SENDGRID_API_KEY);        // Tạo đối tượng có api key
+
+            try{
+                $response = $sendgrid->send($email);
+                print $response->statusCode() . "\n";
+                echo '<pre>';
+                print_r($response->headers());
+                print $response->body() . "\n";
+            }
+            catch(Exception $e){
+                echo 'Caught exception: '. $e->getMessage() ."\n";
+            }
+
+        }
+
+
+
+        public function sendMailPhpMailer($emailSend, $passSend, $emailReceive, $nameReceive, $emailContent){
             require_once CORE_PATH . 'phpMailer/phpmailer/phpmailer/src/PHPMailer.php';
             require_once CORE_PATH . 'phpMailer/phpmailer/phpmailer/src/SMTP.php';
             require_once CORE_PATH . 'phpMailer/autoload.php';

@@ -67,6 +67,10 @@
     define('TB_ORDER', '`order`');
     define('TB_ORDER_DETAIL', '`order_detail`');
 
+
+    //---------------------------- Định nghĩa SendGrid ----------------------------//
+    define('SENDGRID_API_KEY', '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');
+
     
 
 
