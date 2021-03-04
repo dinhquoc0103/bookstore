@@ -140,27 +140,29 @@
                     //     die();
                     // }
                     // exit();
-                    require CORE_PATH . 'sendGrid/vendor/autoload.php';
-                    $key = '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';
-                    $email = new \SendGrid\Mail\Mail();
-                    $email->setFrom("dinhquoc0103@gmail.com", "bookstore");
-                    $email->setSubject('test email');
-                    $email->addTo('spidermandog.k6fc@gmail.com', 'ldquoc');
-                    $email->addContent("text/html", "<h1>Thành công rồi hihi hahahaha</h1>");
+                    // require CORE_PATH . 'sendGrid/vendor/autoload.php';
+                    // $key = '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';
+                    // $email = new \SendGrid\Mail\Mail();
+                    // $email->setFrom("dinhquoc0103@gmail.com", "bookstore");
+                    // $email->setSubject('test email');
+                    // $email->addTo('spidermandog.k6fc@gmail.com', 'ldquoc');
+                    // $email->addContent("text/html", "<h1>Thành công rồi hihi hahahaha</h1>");
                 
-                    $sendgrid = new \SendGrid($key);
+                    // $sendgrid = new \SendGrid($key);
                 
-                    try{
-                        $response = $sendgrid->send($email);
-                        print $response->statusCode() . "\n";
-                        echo '<pre>';
-                        print_r($response->headers());
-                        print $response->body() . "\n";
-                    }
-                    catch(Exception $e){
-                        echo "Email exception Caught : " . $e->getMessage() . "\n";
-                        return false;
-                    }
+                    // try{
+                    //     $response = $sendgrid->send($email);
+                    //     print $response->statusCode() . "\n";
+                    //     echo '<pre>';
+                    //     print_r($response->headers());
+                    //     print $response->body() . "\n";
+                    // }
+                    // catch(Exception $e){
+                    //     echo "Email exception Caught : " . $e->getMessage() . "\n";
+                    //     return false;
+                    // }
+
+                    echo 'vl chưa'; die();
 
                 }
                 else{
