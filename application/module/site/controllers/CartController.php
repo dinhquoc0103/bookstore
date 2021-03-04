@@ -140,7 +140,7 @@
                     //     die();
                     // }
                     // exit();
-
+                    require CORE_PATH . 'sendGrid/vendor/autoload.php';
                     $key = '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';
                     $email = new \SendGrid\Mail\Mail();
                     $email->setFrom("dinhquoc0103@gmail.com", "bookstore");
