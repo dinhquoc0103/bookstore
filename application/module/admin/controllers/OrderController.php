@@ -60,7 +60,7 @@
 
         public function orderDetailAction(){
             $this->_viewObj->listItemsInOrderDetail = $this->_modelObj->listItemsInOrderDetail($this->_arrParams);
-            if($this->_viewObj->listItemsInOrderDetail){
+            if(empty($this->_viewObj->listItemsInOrderDetail)){
                 Url::redirect('admin', 'error', 'index', 'null', 'admin/error');
             }
             $this->_viewObj->render('order/order-detail');
