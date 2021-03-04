@@ -16,9 +16,9 @@
     Session::init();
 
     require CORE_PATH . 'sendGrid/vendor/autoload.php';
-    $key = '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';
+    $key = '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';
     $email = new \SendGrid\Mail\Mail();
-    $email->setFrom("dinhquoc0103@gmail.com", "bookstore");
+    $email->setFrom("quocle0103@gmail.com", "bookstore");
     $email->setSubject('test email');
     $email->addTo('spidermandog.k6fc@gmail.com', 'ldquoc');
     $email->addContent("text/html", "<h1>Thành công rồi hihi hahahaha</h1>");
