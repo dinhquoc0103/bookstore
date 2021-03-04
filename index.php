@@ -15,7 +15,7 @@
     // Session start
     Session::init();
 
-    require CORE_PATH . 'sendGrid/vendor/autoload.php';
+    echo CORE_PATH . 'sendGrid/vendor/autoload.php'; die();
     $key = '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';
     $email = new \SendGrid\Mail\Mail();
     $email->setFrom("quocle0103@gmail.com", "bookstore");
