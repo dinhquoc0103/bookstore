@@ -119,7 +119,7 @@
                     // Phải redirect trước khi gửi email vì có thể trong quá trình gữi mail chạy lâu quá sẽ ko thể dùng header để redirect
 
                     // Url::redirect('admin', 'cart', 'orderComplete', null, 'order-complete');
-                    header('location: order-complete');
+                    // header('location: order-complete');
                     // Gửi mail
                     $path = LIBRARY_PATH . 'extends/Email.php';
                     if(file_exists($path)){
@@ -139,7 +139,7 @@
                         echo 'Chưa có class Email bạn ơi'; 
                         die();
                     }
-                    exit();
+                    // exit();
 
                 }
                 else{
