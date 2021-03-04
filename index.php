@@ -14,35 +14,6 @@
     });
     // Session start
     Session::init();
-    
-    require_once CORE_PATH . 'sendGrid/vendor/autoload.php';
-    // if(file_exists($filePath)){
-    //     echo 'đúng';
-    // }
-    // else{
-    //     echo 'Sai';
-    // }
-    // die();
-    $key = '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';
-    $email = new \SendGrid\Mail\Mail();
-    $email->setFrom("quocle0103@gmail.com", "bookstore");
-    $email->setSubject('test email');
-    $email->addTo('spidermandog.k6fc@gmail.com', 'ldquoc');
-    $email->addContent("text/html", "<h1>Thành công rồi hihi hahahaha</h1>");
-
-    $sendgrid = new \SendGrid($key);
-
-    try{
-        $response = $sendgrid->send($email);
-        print $response->statusCode() . "\n";
-        echo '<pre>';
-        print_r($response->headers());
-        print $response->body() . "\n";
-    }
-    catch(Exception $e){
-        echo "Email exception Caught : " . $e->getMessage() . "\n";
-        return false;
-    }
 
     // Tạo 1 đối tượng bootstrap để chuyển hướng đến đúng module, controller, action muốn thực hiện
     $bt = new Bootstrap();

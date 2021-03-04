@@ -34,33 +34,35 @@
 
                 $this->_arrParams['form'] = $validate->getResult();
                 $this->_arrParams['form']['active_code'] = Helper::ramdomString(8);
-
+                
                 if($validate->isValidate() == true){
                    
                     $idInsert = $this->_modelObj->saveItem($this->_arrParams, 'register-user');
-                    $path = LIBRARY_PATH . 'extends/Email.php';
-                    if(file_exists($path)){
-                        require_once $path;
-                        $email = new Email();
-                        // index.php?module=site&controller=index&action=active&user_id=5&active_code=xxxdfdf2232
-                        $linkActive= "https://bookkg.herokuapp.com/home/active/userId-$idInsert/activeCode-".$this->_arrParams['form']['active_code'] ; 
-                        $linkActive= Url::createLink(
-                            null, null, null, null, $linkActive
-                        ) ; 
-                        $contentRegister = $email->createEmailRegisterHtml($linkActive);
-                        $email->sendMail(
-                            'dinhquoc0103@gmail.com',
-                            'bookstore',
-                            $this->_arrParams['form']['email'],
-                            $this->_arrParams['form']['fullname'],
-                            'Đăng Ký Tài Khoản Thành Công',
-                            $contentRegister
-                        );
-                    }
-                    else{
-                        echo 'Chưa có class Email bạn ơi'; 
-                        die();
-                    }
+                    $linkActive= "https://bookkg.herokuapp.com/home/active/userId-$idInsert/activeCode-".$this->_arrParams['form']['active_code'] ;
+                    Session::set('active_account', $linkActive);
+                    // $path = LIBRARY_PATH . 'extends/Email.php';
+                    // if(file_exists($path)){
+                    //     require_once $path;
+                    //     $email = new Email();
+                    //     // index.php?module=site&controller=index&action=active&user_id=5&active_code=xxxdfdf2232
+                    //     $linkActive= "https://bookkg.herokuapp.com/home/active/userId-$idInsert/activeCode-".$this->_arrParams['form']['active_code'] ; 
+                    //     $linkActive= Url::createLink(
+                    //         null, null, null, null, $linkActive
+                    //     ) ; 
+                    //     $contentRegister = $email->createEmailRegisterHtml($linkActive);
+                    //     $email->sendMail(
+                    //         'dinhquoc0103@gmail.com',
+                    //         'bookstore',
+                    //         $this->_arrParams['form']['email'],
+                    //         $this->_arrParams['form']['fullname'],
+                    //         'Đăng Ký Tài Khoản Thành Công',
+                    //         $contentRegister
+                    //     );
+                    // }
+                    // else{
+                    //     echo 'Chưa có class Email bạn ơi'; 
+                    //     die();
+                    // }
 
                     Url::redirect('site', 'index', 'notification', ['type' => 'register-success'], 'notification/register-success');
                    

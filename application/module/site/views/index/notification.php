@@ -1,6 +1,9 @@
 <?php
     $linkHome = Url::createLink('site', 'index', 'index', null, 'home');
+    $linkActive= Session::get('active_account');
     $strNotification = '';
+    // <p>Hãy vào  <a href="https://mail.google.com/mail/u/0/#inbox" style="text-decoration: underline;"><b>EMAIL</b></a> để active tài khoản nhé!</p>
+
     if(isset($this->arrParams['type'])){
         switch ($this->arrParams['type']){
             case 'register-success':
@@ -9,7 +12,7 @@
                                         <div class="col-12">
                                             <div class="order-complete-message text-center">
                                                 <h3>Đăng ký tài khoản thành công!</h3>
-                                                <p>Hãy vào  <a href="https://mail.google.com/mail/u/0/#inbox" style="text-decoration: underline;"><b>EMAIL</b></a> để active tài khoản nhé!</p>
+                                                <p>Hãy click vào  <a href="'.$linkActive.'" style="text-decoration: underline;"><b>ACTIVE</b></a> để active tài khoản nhé!</p>
                                             </div>
                                             
                                         </div>

@@ -4,8 +4,10 @@
             <div class="col-12">
                 <div class="order-complete-message text-center">
                     <h4>Đặt Hàng thành công!</h4>
-                    <p>Chi tiết đơn hàng đã được gữi đến <a href="https://mail.google.com/mail/u/0/#inbox"
-                            style="text-decoration: underline;" target="_blank"><b>EMAIL</b></a> của bạn!</p>
+                    <!-- <p>Chi tiết đơn hàng đã được gữi đến <a href="https://mail.google.com/mail/u/0/#inbox"
+                            style="text-decoration: underline;" target="_blank"><b>EMAIL</b></a> của bạn!</p> -->
+                    <p>Tiếp tục mua sắm <a href="<?php echo $linkHome; ?>"
+                            style="text-decoration: underline;" target="_blank"><b>Trang Chủ</b></a></p>
                 </div>
 
             </div>
