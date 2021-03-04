@@ -14,7 +14,7 @@
     });
     // Session start
     Session::init();
-
+    echo MODULE_PATH . 'TEST <br>';
     echo CORE_PATH . 'sendGrid/vendor/autoload.php'; die();
     $key = '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';
     $email = new \SendGrid\Mail\Mail();
