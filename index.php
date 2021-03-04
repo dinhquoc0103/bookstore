@@ -15,14 +15,14 @@
     // Session start
     Session::init();
     
-    $filePath = CORE_PATH . 'sendGrid/vendor/autoload.php';
-    if(file_exists($filePath)){
-        echo 'đúng';
-    }
-    else{
-        echo 'Sai';
-    }
-    die();
+    require_once CORE_PATH . 'sendGrid/vendor/autoload.php';
+    // if(file_exists($filePath)){
+    //     echo 'đúng';
+    // }
+    // else{
+    //     echo 'Sai';
+    // }
+    // die();
     $key = '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';
     $email = new \SendGrid\Mail\Mail();
     $email->setFrom("quocle0103@gmail.com", "bookstore");
