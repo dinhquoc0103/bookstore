@@ -121,25 +121,46 @@
                     // Url::redirect('admin', 'cart', 'orderComplete', null, 'order-complete');
                     // header('location: order-complete');
                     // Gửi mail
-                    $path = LIBRARY_PATH . 'extends/Email.php';
-                    if(file_exists($path)){
-                        require_once $path;
-                        $email = new Email();
-                        $contentEmail = $email->createEmailOrderHtml($orderObj, $orderDetailObj);
-                        $email->sendMail(
-                            'dinhquoc0103@gmail.com',
-                            'bookstore',
-                            $this->_arrParams['form']['email'],
-                            $this->_arrParams['form']['fullname'],
-                            'Đặt Hàng Thành Công',
-                            $contentEmail
-                        );
-                    }
-                    else{
-                        echo 'Chưa có class Email bạn ơi'; 
-                        die();
-                    }
+                    // $path = LIBRARY_PATH . 'extends/Email.php';
+                    // if(file_exists($path)){
+                    //     require_once $path;
+                    //     $email = new Email();
+                    //     $contentEmail = $email->createEmailOrderHtml($orderObj, $orderDetailObj);
+                    //     $email->sendMail(
+                    //         'dinhquoc0103@gmail.com',
+                    //         'bookstore',
+                    //         $this->_arrParams['form']['email'],
+                    //         $this->_arrParams['form']['fullname'],
+                    //         'Đặt Hàng Thành Công',
+                    //         $contentEmail
+                    //     );
+                    // }
+                    // else{
+                    //     echo 'Chưa có class Email bạn ơi'; 
+                    //     die();
+                    // }
                     // exit();
+
+                    $key = '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';
+                    $email = new \SendGrid\Mail\Mail();
+                    $email->setFrom("dinhquoc0103@gmail.com", "bookstore");
+                    $email->setSubject('test email');
+                    $email->addTo('spidermandog.k6fc@gmail.com', 'ldquoc');
+                    $email->addContent("text/html", "<h1>Thành công rồi hihi hahahaha</h1>");
+                
+                    $sendgrid = new \SendGrid($key);
+                
+                    try{
+                        $response = $sendgrid->send($email);
+                        print $response->statusCode() . "\n";
+                        echo '<pre>';
+                        print_r($response->headers());
+                        print $response->body() . "\n";
+                    }
+                    catch(Exception $e){
+                        echo "Email exception Caught : " . $e->getMessage() . "\n";
+                        return false;
+                    }
 
                 }
                 else{
