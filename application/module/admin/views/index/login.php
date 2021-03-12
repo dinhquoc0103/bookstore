@@ -15,7 +15,8 @@
                     
                         <form class="md-float-material form-material"  action="" method="post" name="adminForm" id="adminForm">
                             <div class="text-center">
-                                <img src="<?php echo $ImgSrc; ?>/assets/images/logo.png" alt="logo.png">
+                                <!-- <img src="<?php //echo $ImgSrc; ?>/assets/images/logo.png" alt="logo.png">s -->
+                                <h5>BookStore</h5>
                             </div>
                             <div class="auth-box card">
                                 <div class="card-block">
@@ -25,12 +26,12 @@
                                         </div>
                                     </div>
                                     <div class="form-group form-primary">
-                                        <input type="text" name="form[email]" class="form-control" required="">
+                                        <input type="text" value="dinhquoc0103@gmail.com" name="form[email]" class="form-control" required="">
                                         <span class="form-bar"></span>
                                         <label class="float-label">Your Email Address</label>
                                     </div>
                                     <div class="form-group form-primary">
-                                        <input type="password" name="form[password]" class="form-control" required="">
+                                        <input type="password" value="Php@12345" name="form[password]" class="form-control" required="">
                                         <span class="form-bar"></span>
                                         <label class="float-label">Password</label>
                                     </div>
@@ -59,7 +60,7 @@
                                     <div class="row">
                                         <div class="col-md-10">
                                             <p class="text-inverse text-left m-b-0">Thank you.</p>
-                                            <p class="text-inverse text-left"><a href="index.html"><b>Back to website</b></a></p>
+                                            <p class="text-inverse text-left"><a href="<?php echo $linkHome; ?>"><b>Back to website</b></a></p>
                                         </div>
                                         <div class="col-md-2">
                                             <img src="<?php echo $ImgSrc; ?>/assets/images/auth/Logo-small-bottom.png" alt="small-logo.png">
