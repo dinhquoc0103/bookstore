@@ -69,7 +69,6 @@
 
 
     //---------------------------- Định nghĩa SendGrid ----------------------------//
-    define('SENDGRID_API_KEY', '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');
 
     
 
