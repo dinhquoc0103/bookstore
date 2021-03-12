@@ -107,7 +107,7 @@
         <!-- task, page, download counter  end -->
 
         <!--  sale analytics start -->
-        <div class="col-xl-8 col-md-12">
+        <!-- <div class="col-xl-8 col-md-12">
             <div class="card">
                 <div class="card-header">
                     <h5>Sales Analytics</h5>
@@ -164,11 +164,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!--  sale analytics end -->
 
         <!--  project and team member start -->
-        <div class="col-xl-8 col-md-12">
+        <!-- <div class="col-xl-8 col-md-12">
             <div class="card table-card">
                 <div class="card-header">
                     <h5>Projects</h5>
@@ -375,7 +375,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!--  project and team member end -->
     </div>
 </div>
