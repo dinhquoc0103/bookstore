@@ -13,6 +13,11 @@
         public function indexAction(){
             $this->_viewObj->_titlePage = 'Dashboard Administration - Bookstore';
 
+            $this->_viewObj->totalUsers =  $this->_modelObj->countItems($this->_arrParams, 'total-users');
+            $this->_viewObj->totalOrders =  $this->_modelObj->countItems($this->_arrParams, 'total-orders');
+            $this->_viewObj->totalProducts =  $this->_modelObj->countItems($this->_arrParams, 'total-products');
+            $this->_viewObj->totalOrdersCompleted =  $this->_modelObj->countItems($this->_arrParams, 'total-orders-completed');
+            
             $this->_viewObj->render('index/index');
         }
 

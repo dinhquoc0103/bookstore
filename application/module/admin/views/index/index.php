@@ -8,21 +8,21 @@
                 <div class="card-block">
                     <div class="row align-items-center">
                         <div class="col-8">
-                            <h4 class="text-c-purple">$30200</h4>
-                            <h6 class="text-muted m-b-0">All Earnings</h6>
+                            <h4 class="text-c-purple"><?php echo $this->totalUsers ?></h4>
+                            <!-- <h6 class="text-muted m-b-0">All</h6> -->
                         </div>
                         <div class="col-4 text-right">
-                            <i class="fa fa-bar-chart f-28"></i>
+                            <i class="fa fa-user-o f-28" aria-hidden="true"></i>
                         </div>
                     </div>
                 </div>
                 <div class="card-footer bg-c-purple">
                     <div class="row align-items-center">
                         <div class="col-9">
-                            <p class="text-white m-b-0">% change</p>
+                            <p class="text-white m-b-0">USER</p>
                         </div>
                         <div class="col-3 text-right">
-                            <i class="fa fa-line-chart text-white f-16"></i>
+                            <!-- <i class="fa fa-line-chart text-white f-16"></i> -->
                         </div>
                     </div>
 
@@ -34,8 +34,8 @@
                 <div class="card-block">
                     <div class="row align-items-center">
                         <div class="col-8">
-                            <h4 class="text-c-green">290+</h4>
-                            <h6 class="text-muted m-b-0">Page Views</h6>
+                            <h4 class="text-c-green"><?php echo $this->totalOrders ?></h4>
+                            <!-- <h6 class="text-muted m-b-0">Page Views</h6> -->
                         </div>
                         <div class="col-4 text-right">
                             <i class="fa fa-file-text-o f-28"></i>
@@ -45,10 +45,10 @@
                 <div class="card-footer bg-c-green">
                     <div class="row align-items-center">
                         <div class="col-9">
-                            <p class="text-white m-b-0">% change</p>
+                            <p class="text-white m-b-0">ORDER</p>
                         </div>
                         <div class="col-3 text-right">
-                            <i class="fa fa-line-chart text-white f-16"></i>
+                            <!-- <i class="fa fa-line-chart text-white f-16"></i> -->
                         </div>
                     </div>
                 </div>
@@ -59,21 +59,21 @@
                 <div class="card-block">
                     <div class="row align-items-center">
                         <div class="col-8">
-                            <h4 class="text-c-red">145</h4>
-                            <h6 class="text-muted m-b-0">Task Completed</h6>
+                            <h4 class="text-c-red"><?php echo $this->totalProducts ?></h4>
+                            <!-- <h6 class="text-muted m-b-0">Task Completed</h6> -->
                         </div>
                         <div class="col-4 text-right">
-                            <i class="fa fa-calendar-check-o f-28"></i>
+                            <i class="fa fa-book f-28" aria-hidden="true"></i>
                         </div>
                     </div>
                 </div>
                 <div class="card-footer bg-c-red">
                     <div class="row align-items-center">
                         <div class="col-9">
-                            <p class="text-white m-b-0">% change</p>
+                            <p class="text-white m-b-0">PRODUCT</p>
                         </div>
                         <div class="col-3 text-right">
-                            <i class="fa fa-line-chart text-white f-16"></i>
+                            <!-- <i class="fa fa-line-chart text-white f-16"></i> -->
                         </div>
                     </div>
                 </div>
@@ -84,21 +84,21 @@
                 <div class="card-block">
                     <div class="row align-items-center">
                         <div class="col-8">
-                            <h4 class="text-c-blue">500</h4>
-                            <h6 class="text-muted m-b-0">Downloads</h6>
+                            <h4 class="text-c-blue"><?php echo $this->totalOrdersCompleted; ?></h4>
+                            <!-- <h6 class="text-muted m-b-0">Downloads</h6> -->
                         </div>
                         <div class="col-4 text-right">
-                            <i class="fa fa-hand-o-down f-28"></i>
+                            <!-- <i class="fa fa-calendar-check-o f-28"></i> -->
                         </div>
                     </div>
                 </div>
                 <div class="card-footer bg-c-blue">
                     <div class="row align-items-center">
                         <div class="col-9">
-                            <p class="text-white m-b-0">% change</p>
+                            <p class="text-white m-b-0">ORDERS COMPLETED</p>
                         </div>
                         <div class="col-3 text-right">
-                            <i class="fa fa-line-chart text-white f-16"></i>
+                            <!-- <i class="fa fa-line-chart text-white f-16"></i> -->
                         </div>
                     </div>
                 </div>
