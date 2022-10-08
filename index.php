@@ -3,6 +3,8 @@
     // Gọi các file định nghĩa sẵn các keyword
     require_once "define.php";
 
+    require('vendor/autoload.php');
+
     date_default_timezone_set('Asia/Ho_Chi_Minh');
 
     // Tự động load các class dùng chung ở folder libs khi cần
@@ -12,7 +14,7 @@
             require_once $filePath;  
         }
     });
-    
+
     // Session start
     Session::init();
 
