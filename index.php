@@ -1,7 +1,7 @@
 <?php
 
     // Gọi các file định nghĩa sẵn các keyword
-    require_once "define.php";
+    // require_once "define.php";
 
     require('vendor/autoload.php');
 
