@@ -13,7 +13,7 @@
                 $connectParams['username'] = DB_USERS;
                 $connectParams['password'] = DB_PASS;
                 $connectParams['database'] = DB_NAME;
-                // $connectParams['post'] = DB_POST;
+                $connectParams['port'] = DB_PORT;
                 $connectParams['table'] = DB_TABLE;
             }
             $link = mysqli_connect(
@@ -21,7 +21,7 @@
                 $connectParams['username'],
                 $connectParams['password'],
                 $connectParams['database'],
-                // $connectParams['post']
+                $connectParams['port']
             );
 
             if($this->checkConnect($link) == true){
