@@ -19,6 +19,6 @@
     // Session::init();
 
     // Tạo 1 đối tượng bootstrap để chuyển hướng đến đúng module, controller, action muốn thực hiện
-    $bt = new Bootstrap();
-    $bt->init();
+    // $bt = new Bootstrap();
+    // $bt->init();
 ?>
