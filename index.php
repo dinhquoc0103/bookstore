@@ -12,6 +12,7 @@
             require_once $filePath;  
         }
     });
+    
     // Session start
     Session::init();
 
