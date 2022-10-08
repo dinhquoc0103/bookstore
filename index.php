@@ -1,8 +1,9 @@
 <?php
-
+    ini_set('display_errors', 'on');
+    error_reporting(E_ALL);
     // Gọi các file định nghĩa sẵn các keyword
     require_once "define.php";
-    error_reporting(E_ALL);
+    
     // require('vendor/autoload.php');
 
     date_default_timezone_set('Asia/Ho_Chi_Minh');
