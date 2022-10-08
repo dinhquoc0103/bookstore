@@ -24,6 +24,11 @@
                 $connectParams['port']
             );
 
+            // Đây là giải pháp nếu thay đổi collation (bảng mã đối chiếu) trên phpmyadmin nước ngoài rồi 
+            // Và đã nhập được database nhưng build ra chính thì nó vẫn là bảng mã đối chiếu nước ngoài nên lỗi
+            // font thì dùng cái set_charset ép về utf8. Còn nếu phpmyadmin mặt định có utf8 thì thôi khỏi cần
+            $link->set_charset("utf8");
+
             if($this->checkConnect($link) == true){
                 $this->connectParams = $connectParams;
                 $this->table = $connectParams['table'];
@@ -142,11 +147,8 @@
         // Trả về mảng các row luôn để dễ đổ dữ liệu hay thao tác
         public function select($sql){
             $result = $this->query($sql);
-            // echo '<pre>';
-            // print_r($result);
             $this->checkQuery($result);
-            // echo '<pre>';
-            // print_r($sql);
+
             $arrResult = array();
             if(mysqli_num_rows($result) > 0){
                 while($row = mysqli_fetch_assoc($result)){
