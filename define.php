@@ -20,7 +20,7 @@
 
     //---------------------------- Định nghĩa URL tương đối cho CSS và JS ----------------------------//
     // Tương đối là từ thư mục chứa dự án .. chứ không xuất phát từ ổ đĩa chứa tất cả các file
-    define('ROOT_URL', 'https://bookstoreq.herokuapp.com' . DS);
+    define('ROOT_URL', 'http://127.0.0.1:8000/bookstores' . DS);
     define('PUBLIC_URL', ROOT_URL . 'public' . DS);
     define('TEMPLATE_URL', PUBLIC_URL . 'template' . DS);
     define('APPLICATION_URL', ROOT_URL . 'application' . DS);
@@ -35,29 +35,29 @@
 
     //---------------------------- Định nghĩa tham số DATABASE ----------------------------//
     // for developer 
-    // // host đang thao tác
-    // define('DB_HOST', 'localhost');
-    // // Username phpMyAdmin
-    // define('DB_USERS', 'root');
-    // // Password phpMyAdmin
-    // define('DB_PASS', '');
-    // // Database muốn connect
-    // define('DB_NAME', 'book_store');
-    // // Table muốn thao tác
-    // define('DB_TABLE', '`user`');
-
     // host đang thao tác
-    define('DB_HOST', 'sql6.freemysqlhosting.net');
+    define('DB_HOST', 'localhost');
     // Username phpMyAdmin
-    define('DB_USERS', 'sql6525022');
+    define('DB_USERS', 'root');
     // Password phpMyAdmin
-    define('DB_PASS', 'YZMdbn7wYm');
+    define('DB_PASS', '');
     // Database muốn connect
-    define('DB_NAME', 'sql6525022');
-    // Port muốn connect
-    define('DB_POST', '3306');
+    define('DB_NAME', 'book_stores');
     // Table muốn thao tác
     define('DB_TABLE', '`user`');
+
+    // host đang thao tác
+    // define('DB_HOST', 'remotemysql.com');
+    // // Username phpMyAdmin
+    // define('DB_USERS', 'KAIyqaosbq');
+    // // Password phpMyAdmin
+    // define('DB_PASS', 'RC21qltEfk');
+    // // Database muốn connect
+    // define('DB_NAME', 'KAIyqaosbq');
+    // // Port muốn connect
+    // define('DB_POST', '3306');
+    // // Table muốn thao tác
+    // define('DB_TABLE', '`user`');
 
     //---------------------------- Định nghĩa TABLE ----------------------------//
     define('TB_GROUP', '`group`');

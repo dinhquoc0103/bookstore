@@ -13,7 +13,7 @@
                 $connectParams['username'] = DB_USERS;
                 $connectParams['password'] = DB_PASS;
                 $connectParams['database'] = DB_NAME;
-                $connectParams['post'] = DB_POST;
+                // $connectParams['post'] = DB_POST;
                 $connectParams['table'] = DB_TABLE;
             }
             $link = mysqli_connect(
@@ -21,8 +21,9 @@
                 $connectParams['username'],
                 $connectParams['password'],
                 $connectParams['database'],
-                $connectParams['post']
+                // $connectParams['post']
             );
+
             if($this->checkConnect($link) == true){
                 $this->connectParams = $connectParams;
                 $this->table = $connectParams['table'];
@@ -48,10 +49,11 @@
         // Check lỗi khi connect
         private function checkConnect($link){
             if(!$link) return false;
-            else return true; {
-                error_reporting(0);
-                die('Connect Error: '.mysqli_connect_error());
-            }
+            else return true;
+            //  {
+            //     error_reporting(0);
+            //     die('Connect Error: '.mysqli_connect_error());
+            // }
         }
 
         // Tạo chuỗi tham số các cột và chuỗi giá trị cho insert
@@ -140,8 +142,11 @@
         // Trả về mảng các row luôn để dễ đổ dữ liệu hay thao tác
         public function select($sql){
             $result = $this->query($sql);
+            // echo '<pre>';
+            // print_r($result);
             $this->checkQuery($result);
-
+            // echo '<pre>';
+            // print_r($sql);
             $arrResult = array();
             if(mysqli_num_rows($result) > 0){
                 while($row = mysqli_fetch_assoc($result)){

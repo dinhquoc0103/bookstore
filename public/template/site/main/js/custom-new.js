@@ -71,7 +71,7 @@ $(document).ready(function(){
             keyword = $("#form-search .keyword").val();
             keyword = keyword.split(' ');
             keyword = keyword.join('+');         
-            window.location.replace('https://bookkg.herokuapp.com/search/keyword='+keyword);          
+            window.location.replace('http://127.0.0.1:8000/bookstores/search/keyword='+keyword);          
             e.preventDefault(); 
 
         });
@@ -90,7 +90,7 @@ $(document).ready(function(){
             // else{
             //     window.location.replace('/bookstore/search/keyword='+keyword);
             // }
-            window.location.replace('https://bookkg.herokuapp.com/search/keyword='+keyword);
+            window.location.replace('http://127.0.0.1:8000/bookstores/search/keyword='+keyword);
              
             e.preventDefault(); 
 
