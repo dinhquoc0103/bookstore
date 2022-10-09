@@ -20,34 +20,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-9 order-lg-2">
-                <!-- <div class="shop-toolbar with-sidebar mb--30"> -->
-                    <!-- <div class="row align-items-center justify-content-between"> -->
-                        <!-- col-lg-7 col-md-2 col-sm-6 -->
-                        <!-- <div class=""> -->
-                            <!-- Product View Mode -->
-                            <!-- <div class="product-view-mode"> -->
-                                <!-- <a href="#" class="sorting-btn" data-target="grid"><i class="fas fa-th"></i></a> -->
-                                <!-- <a href="#" class="sorting-btn active" data-target="grid-four">
-                                    <span class="grid-four-icon">
-                                        <i class="fas fa-grip-vertical"></i><i class="fas fa-grip-vertical"></i>
-                                    </span>
-                                </a> -->
-
-                            <!-- </div>
-                        </div> -->
-                        <!-- col-xl-5 col-lg-2 col-md-4 col-sm-6 mt--10-->
-                        <!-- <div class="  mt-md--0 ">
-                            <div class="sorting-selection"> -->
-                                <?php //echo $selectBoxSortBy; ?>
-                            <!-- </div>
-                        </div> -->
-                    <!-- </div> -->
-                <!-- </div> -->
-
                 <div class="list-product ">
                     <div class="shop-product-wrap with-pagination row space-db--30 shop-border grid-four">
 
-                        <?php
+        <?php
             if(!empty($this->listItemsSearch)){
                 foreach($this->listItemsSearch as $item){
                     $id = $item['id'];
@@ -100,11 +76,13 @@
 
                             </div>
                         </div>
-                        <?php
+        <?php
                }
             }
             else{
-                echo '<h4 class="search-empty">Không có sản phẩm phù hợp với từ khóa tìm kiếm :((</h4>';
+                echo '<div class="text-center no-result">
+                        <img style="width=54%" src="https://medplus.vn/images/404.png" >
+                    </div>';
             }
         ?>
                     </div>
