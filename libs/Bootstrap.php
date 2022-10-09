@@ -6,11 +6,8 @@
         private $_controllerObj;
 
         public function init(){
-
             $this->setArrParams();
-
             $this->createControllerObj();
-
             $this->callAction();
         }
 
@@ -52,17 +49,6 @@
 
         // Gọi action cần thực hiện
         public function callAction(){
-            // echo '<pre>';
-            // print_r($_SESSION); die();
-            // // Tên action
-            // $actionName = $this->_arrParams['action'] . 'Action';
-
-            // if(method_exists($this->_controllerObj, $actionName)){
-            //     $this->_controllerObj->$actionName();
-            // }
-            // else{
-            //     $this->error();
-            // }
             $user = Session::get('user');
             $logged = isset($user['login']) ? $user['login'] : null;
             $timeLogin = isset($user['time']) ? $user['time'] : null;
@@ -71,16 +57,11 @@
                 $timeCurrent = time();
                 $timeLogout = $timeCurrent - $timeLogin;
             }
-            // echo '<pre>';
-            // print_r($_SESSION);
-            // Session::delete('user');
+
             $actionName = $this->_arrParams['action'] . 'Action';
             if(method_exists($this->_controllerObj, $actionName)){
                 switch ($this->_arrParams['module']){
                     case 'admin':
-                        // echo '<pre>';
-                        // print_r($this->_arrParams);
-                        // echo 'hahas'; die();
                         if($logged == true){
                             if($this->_arrParams['action'] == 'login'){
                                 Url::redirect('admin', 'error', 'index', null, 'admin/error');

@@ -14,19 +14,21 @@
             $this->_viewObj->_titlePage = 'Giỏ Hàng - Bookstore';
 
             $cart = Session::get('cart');
+           
             if(empty($cart['quantity']) && empty($cart['price'])){               
                 Session::delete('cart');
                 Session::delete('totalPrice');
                 Session::delete('totalProduct');
             }
-
+   
             $this->_viewObj->listItemsInCart = $this->_modelObj->listItemsInCart($this->_arrParams);
+            // echo '<pre>';
+            // print_r($this->_viewObj->listItemsInCart);
             $this->_viewObj->render('cart/index');
         }
 
 
         public function addToCartAction(){
-           
             $cart = Session::get('cart');
             $bookID = $this->_arrParams['book_id'];
             $price = $this->_arrParams['price'];
@@ -60,7 +62,6 @@
             
             
             echo json_encode(['totalProduct' => $totalProduct, 'totalPrice' => $totalPrice]);
-
         }
 
 
