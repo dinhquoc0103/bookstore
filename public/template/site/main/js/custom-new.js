@@ -23,7 +23,7 @@ $(document).ready(function(){
             page = arrVal[2];
     
             dataSend = {'sort_by':sortBy, 'category_id':categoryId, 'page':page};
-            link = 'https://bookkg.herokuapp.com/index.php?module=site&controller=book&action=ajaxSortByList';
+            link = rootUrl + '/index.php?module=site&controller=book&action=ajaxSortByList';
             $.get(
                 link, 
                 dataSend, 
