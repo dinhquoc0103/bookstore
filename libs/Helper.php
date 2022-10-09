@@ -106,6 +106,9 @@
 
         //Rút ngắn văn bản
         public static function shortenText($text, $wordCount){
+            if($text == null){
+                return '';
+            }
             if(!empty($text) || trim($text) != null){
                 if(str_word_count($text) > $wordCount){
                     $arrWord = array_slice(explode(' ', $text), 0, $wordCount);
