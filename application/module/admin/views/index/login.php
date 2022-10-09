@@ -31,7 +31,7 @@
                                         <label class="float-label">Your Email Address</label>
                                     </div>
                                     <div class="form-group form-primary">
-                                        <input type="password" value="Php@123456" name="form[password]" class="form-control" required="">
+                                        <input type="password" value="12345678" name="form[password]" class="form-control" required="">
                                         <span class="form-bar"></span>
                                         <label class="float-label">Password</label>
                                     </div>

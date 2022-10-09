@@ -220,8 +220,9 @@
         // validate status
         private function validatePassword($element, $options){
            if($options['action'] == 'add' || ($options['action'] == 'edit' && $this->source[$element] != null )){
-                $pattern = "#^(?=.*\d)(?=.*[A-Z])(?=.*\W).{8,16}$#";
-                $result = preg_match($pattern, $this->source[$element]);
+                // $pattern = "#^(?=.*\d)(?=.*[A-Z])(?=.*\W).{8,16}$#";
+                // $result = preg_match($pattern, $this->source[$element]);
+                $result = strlen($this->source[$element]) >= 8;
                 if(!$result){
                     $this->setError($element, 'không thoả mãn. (Độ dài từ 8, bao gồm chữ thường, in hoa, số và ký tự đặc biệt)');
 
