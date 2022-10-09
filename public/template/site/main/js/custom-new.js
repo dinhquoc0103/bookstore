@@ -5,9 +5,9 @@ function getUrlVar(key){
 
 // https://bookstoreq.herokuapp.com
 // root url localhost
-var rootUrl = '/bookstores';
+// var rootUrl = '/bookstores';
 // root url hosting
-// var rootUrl = '';
+var rootUrl = '';
 
 $(document).ready(function(){
     $("#btn-register, #btn-login").click(function(){

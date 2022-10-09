@@ -38,7 +38,7 @@
                 if($validate->isValidate() == true){
                    
                     $idInsert = $this->_modelObj->saveItem($this->_arrParams, 'register-user');
-                    $linkActive= "https://bookkg.herokuapp.com/home/active/userId-$idInsert/activeCode-".$this->_arrParams['form']['active_code'] ;
+                    $linkActive= ROOT_URL .  "home/active/userId-$idInsert/activeCode-".$this->_arrParams['form']['active_code'] ;
                     Session::set('active_account', $linkActive);
                     // $path = LIBRARY_PATH . 'extends/Email.php';
                     // if(file_exists($path)){

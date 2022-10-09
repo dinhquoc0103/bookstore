@@ -1,7 +1,7 @@
 // root url localhost
-var rootUrl = '/bookstores';
+// var rootUrl = '/bookstores';
 // root url hosting
-// var rootUrl = '';
+var rootUrl = '';
 
 function changeStatus(link) {
     $.get(link, function(data, textStatus) {

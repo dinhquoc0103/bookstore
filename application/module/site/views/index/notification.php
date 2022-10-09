@@ -1,6 +1,7 @@
 <?php
     $linkHome = Url::createLink('site', 'index', 'index', null, 'home');
     $linkActive= Session::get('active_account');
+
     $strNotification = '';
     // <p>Hãy vào  <a href="https://mail.google.com/mail/u/0/#inbox" style="text-decoration: underline;"><b>EMAIL</b></a> để active tài khoản nhé!</p>
 
