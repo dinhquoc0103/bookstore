@@ -132,6 +132,8 @@
 
         // Thay đổi status của cột status (nhiều cột một lượt)
         public function changeStatusAction(){
+            echo '<pre>';
+            print_r($this->_arrParams);
             $this->_modelObj->changeStatus($this->_arrParams, 'change-status');
             Url::redirect('admin', 'user', 'index', null, 'admin/user');
         }

@@ -1,7 +1,11 @@
+// root url localhost
+var rootUrl = '/bookstores';
+// root url hosting
+// var rootUrl = '';
+
 function changeStatus(link) {
     $.get(link, function(data, textStatus) {
         if (textStatus == 'success') {
-            // console.log(JSON.parse(data));
             data = JSON.parse(data);
             var btnStatus = "a#status-" + data.id;
             var btnModified = ".modified-" + data.id;
@@ -99,7 +103,7 @@ $(document).ready(function(){
     $(".order-status").change(function(){
         var id = $(this).data("id");
         var status = $(this).val();
-        $("#adminForm").attr('action', 'https://bookkg.herokuapp.com/index.php?module=admin&controller=order&action=changeOrderStatus&order_status='+status+'&id='+id);
+        $("#adminForm").attr('action', rootUrl + '/index.php?module=admin&controller=order&action=changeOrderStatus&order_status='+status+'&id='+id);
         $("#adminForm").submit();
     });
 
@@ -109,13 +113,6 @@ $(document).ready(function(){
         $("#adminForm").submit();
     });
 
-    // $(".search-in-table .btn-search").click(function(){
-    //     var x = $("#filter_search").val();
-    //     $("#filter_search").val('index.php?module=admin&controller=group&action=index&' + x);
-    //     $("#adminForm").submit();
-    // });
-
-    
 });
 
 CKEDITOR.replace( 'editor1' );

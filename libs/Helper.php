@@ -3,7 +3,7 @@
     class Helper {
 
         // Create 1 button thao tác 
-        public static function createActionBtn($class, $classIcon, $title, $link = '#', $type = 'new', $style = ''){
+        public static function createActionBtn($class, $classIcon, $link = '#' ,$title, $type = 'new', $style = ''){
             $xhtml = '<li>';
             switch ($type){
                 case 'new':
