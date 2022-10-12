@@ -48,13 +48,13 @@
     // define('DB_TABLE', '`user`');
 
     // host đang thao tác
-    define('DB_HOST', 'sql6.freemysqlhosting.net');
+    define('DB_HOST', 'remotemysql.com');
     // Username phpMyAdmin
-    define('DB_USERS', 'sql6525022');
+    define('DB_USERS', 'RClYMgrlr1');
     // Password phpMyAdmin
-    define('DB_PASS', 'YZMdbn7wYm');
+    define('DB_PASS', 'VBA9fW7gg8');
     // Database muốn connect
-    define('DB_NAME', 'sql6525022');
+    define('DB_NAME', 'RClYMgrlr1');
     // Port muốn connect
     define('DB_PORT', '3306');
     // Table muốn thao tác
