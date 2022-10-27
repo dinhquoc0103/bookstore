@@ -47,18 +47,33 @@
     // // Table muốn thao tác
     // define('DB_TABLE', '`user`');
 
+    // Remotemysql.com
     // host đang thao tác
-    define('DB_HOST', 'remotemysql.com');
-    // Username phpMyAdmin
-    define('DB_USERS', 'RClYMgrlr1');
-    // Password phpMyAdmin
-    define('DB_PASS', 'VBA9fW7gg8');
-    // Database muốn connect
-    define('DB_NAME', 'RClYMgrlr1');
-    // Port muốn connect
-    define('DB_PORT', '3306');
-    // Table muốn thao tác
-    define('DB_TABLE', '`user`');
+    // define('DB_HOST', 'remotemysql.com');
+    // // Username phpMyAdmin
+    // define('DB_USERS', 'RClYMgrlr1');
+    // // Password phpMyAdmin
+    // define('DB_PASS', 'VBA9fW7gg8');
+    // // Database muốn connect
+    // define('DB_NAME', 'RClYMgrlr1');
+    // // Port muốn connect
+    // define('DB_PORT', '3306');
+    // // Table muốn thao tác
+    // define('DB_TABLE', '`user`');
+
+    
+     // host đang thao tác
+     define('DB_HOST', 'sql.freedb.tech');
+     // Username phpMyAdmin
+     define('DB_USERS', 'freedb_shop_q');
+     // Password phpMyAdmin
+     define('DB_PASS', 'C*V7cdzUA32gw%H');
+     // Database muốn connect
+     define('DB_NAME', 'freedb_shop_q');
+     // Port muốn connect
+     define('DB_PORT', '3306');
+     // Table muốn thao tác
+     define('DB_TABLE', '`user`');
 
     //---------------------------- Định nghĩa TABLE ----------------------------//
     define('TB_GROUP', '`group`');
