@@ -27,7 +27,7 @@
             // Đây là giải pháp nếu thay đổi collation (bảng mã đối chiếu) trên phpmyadmin nước ngoài rồi 
             // Và đã nhập được database nhưng build ra chính thì nó vẫn là bảng mã đối chiếu nước ngoài nên lỗi
             // font thì dùng cái set_charset ép về utf8. Còn nếu phpmyadmin mặt định có utf8 thì thôi khỏi cần
-            $link->set_charset("utf8");
+            // $link->set_charset("utf8");
 
             if($this->checkConnect($link) == true){
                 $this->connectParams = $connectParams;
