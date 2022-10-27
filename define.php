@@ -65,11 +65,11 @@
      // host đang thao tác
      define('DB_HOST', 'sql.freedb.tech');
      // Username phpMyAdmin
-     define('DB_USERS', 'freedb_shop_q');
+     define('DB_USERS', 'freedb_bookstores');
      // Password phpMyAdmin
-     define('DB_PASS', 'C*V7cdzUA32gw%H');
+     define('DB_PASS', 'nJeuws%2k2$B6@#');
      // Database muốn connect
-     define('DB_NAME', 'freedb_shop_q');
+     define('DB_NAME', 'freedb_bookstores');
      // Port muốn connect
      define('DB_PORT', '3306');
      // Table muốn thao tác
