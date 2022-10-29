@@ -52,6 +52,7 @@
                         foreach($arrItemInOrder as $key => $item){
                             $arrItemInOrder[$key]['order_id'] = $orderId;
                             $arrItemInOrder[$key]['created'] = date("Y-m-d H:i:s", time());
+                            $arrItemInOrder[$key]['modified'] = date("Y-m-d H:i:s", time());
                         }
                         $data =  $arrItemInOrder;
                         $typeInsert = 'n_row';
