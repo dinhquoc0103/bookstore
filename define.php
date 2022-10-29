@@ -17,6 +17,8 @@
     define('TEMPLATE_PATH', PUBLIC_PATH . 'template' . DS);
     // Path đến folder core
     define('CORE_PATH', ROOT_PATH . 'core' . DS);
+     // Path đến folder core
+     define('VENDOR_PATH', ROOT_PATH . 'vendor' . DS);
 
     //---------------------------- Định nghĩa URL tương đối cho CSS và JS ----------------------------//
     // Tương đối là từ thư mục chứa dự án .. chứ không xuất phát từ ổ đĩa chứa tất cả các file
@@ -35,7 +37,8 @@
     define('DEFAULT_ACTION', 'index');
 
     //---------------------------- Định nghĩa tham số DATABASE ----------------------------//
-    // for developer 
+    // for developer. Nhưng dưới localhost không cần định nghĩa DB_PORT nên phải sang bên libs/Model.php bỏ DB_PORT
+    // mới chạy được nha
     // host đang thao tác
     // define('DB_HOST', 'localhost');
     // // Username phpMyAdmin
@@ -85,7 +88,7 @@
 
 
     //---------------------------- Định nghĩa SendGrid ----------------------------//
-
+    // define('SENDGRID_API_KEY', '');
     
 
 

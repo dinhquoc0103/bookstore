@@ -115,11 +115,10 @@
                     $this->_arrParams['order_id'] = $orderId;
                     $orderObj = $this->_modelObj->getOrder($this->_arrParams); // đơn hàng
                     $orderDetailObj = $this->_modelObj->getOrderDetail($this->_arrParams); // chi tiết các sản phẩm trong đơn hàng
-                    
 
                     // Phải redirect trước khi gửi email vì có thể trong quá trình gữi mail chạy lâu quá sẽ ko thể dùng header để redirect
 
-                    // Url::redirect('admin', 'cart', 'orderComplete', null, 'order-complete');
+                    Url::redirect('admin', 'cart', 'orderComplete', null, 'order-complete');
                    
                     // Gửi mail
                     // $path = LIBRARY_PATH . 'extends/Email.php';
@@ -140,8 +139,8 @@
                     //     echo 'Chưa có class Email bạn ơi'; 
                     //     die();
                     // }
-                    header('location: order-complete');
-                    exit();
+                    // header('location: order-complete');
+                    // exit();
                    
 
                 }

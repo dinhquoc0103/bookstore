@@ -61,6 +61,7 @@
 
         public function sendMail($emailSend, $nameSend, $emailReceive, $nameReceive, $subject, $content){
             require CORE_PATH . 'sendGrid/vendor/autoload.php';
+            // require VENDOR_PATH . 'autoload.php';
             $email = new \SendGrid\Mail\Mail();                 // Tạo đối tượng email
             $email->setFrom($emailSend, $nameSend);             // Gửi mail từ
             $email->setSubject($subject);                       // Tiêu đề email
@@ -77,6 +78,7 @@
                 print $response->body() . "\n";
             }
             catch(Exception $e){
+                echo 'vãi loèn';
                 echo 'Caught exception: '. $e->getMessage() ."\n";
                 return false;
             }

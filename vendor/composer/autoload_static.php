@@ -4,16 +4,64 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit22069779f4bcfb2d34dbfd43a52cc925
+class ComposerStaticInit678c3a05803c481976b2f48d4c960e0d
 {
+    public static $files = array (
+        '79f66bc0a1900f77abe4a9a299057a0a' => __DIR__ . '/..' . '/starkbank/ecdsa/src/ellipticcurve.php',
+    );
+
+    public static $prefixLengthsPsr4 = array (
+        'S' => 
+        array (
+            'SendGrid\\Stats\\' => 15,
+            'SendGrid\\Mail\\' => 14,
+            'SendGrid\\Helper\\' => 16,
+            'SendGrid\\EventWebhook\\' => 22,
+            'SendGrid\\Contacts\\' => 18,
+            'SendGrid\\' => 9,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'SendGrid\\Stats\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/stats',
+        ),
+        'SendGrid\\Mail\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/mail',
+        ),
+        'SendGrid\\Helper\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/helper',
+        ),
+        'SendGrid\\EventWebhook\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/eventwebhook',
+        ),
+        'SendGrid\\Contacts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/contacts',
+        ),
+        'SendGrid\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sendgrid/php-http-client/lib',
+        ),
+    );
+
     public static $classMap = array (
+        'BaseSendGridClientInterface' => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/BaseSendGridClientInterface.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'SendGrid' => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/SendGrid.php',
+        'TwilioEmail' => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/TwilioEmail.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInit22069779f4bcfb2d34dbfd43a52cc925::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit678c3a05803c481976b2f48d4c960e0d::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit678c3a05803c481976b2f48d4c960e0d::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit678c3a05803c481976b2f48d4c960e0d::$classMap;
 
         }, null, ClassLoader::class);
     }
