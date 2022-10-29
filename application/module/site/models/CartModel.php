@@ -46,17 +46,17 @@
                     $orderId = $this->lastRowID(); // Lấy id đơn hàng vừa đặt 
 
                     // Insert các sản phẩm trong đơn hàng vào order_detail
-                    $arrItemInOrder = $this->listItemsInCart($arrParams);
-                    if(!empty($arrItemInOrder)){
-                        $this->setTable(TB_ORDER_DETAIL);
-                        foreach($arrItemInOrder as $key => $item){
-                            $arrItemInOrder[$key]['order_id'] = $orderId;
-                            $arrItemInOrder[$key]['created'] = date("Y-m-d H:i:s", time());
-                        }
-                        $data =  $arrItemInOrder;
-                        $typeInsert = 'n_row';
-                        $this->insert($data, $typeInsert);
-                    }
+                    // $arrItemInOrder = $this->listItemsInCart($arrParams);
+                    // if(!empty($arrItemInOrder)){
+                    //     $this->setTable(TB_ORDER_DETAIL);
+                    //     foreach($arrItemInOrder as $key => $item){
+                    //         $arrItemInOrder[$key]['order_id'] = $orderId;
+                    //         $arrItemInOrder[$key]['created'] = date("Y-m-d H:i:s", time());
+                    //     }
+                    //     $data =  $arrItemInOrder;
+                    //     $typeInsert = 'n_row';
+                    //     $this->insert($data, $typeInsert);
+                    // }
                     return $orderId;
                 break;
             }
