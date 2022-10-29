@@ -96,6 +96,8 @@
                         $arrColumn = $this->strParamInsert($item);
 
                         $sql = "INSERT INTO ".$this->connectParams['table']."(".$arrColumn['column'].") VALUES(".$arrColumn['value'].")  ";
+                        echo $sql;
+                        die();
                         $result = $this->query($sql);
                         $this->checkQuery($result);
 

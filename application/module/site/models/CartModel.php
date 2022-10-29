@@ -54,9 +54,6 @@
                             $arrItemInOrder[$key]['created'] = date("Y-m-d H:i:s", time());
                         }
                         $data =  $arrItemInOrder;
-                        echo '<pre>';
-                        print_r($data);
-                        die();
                         $typeInsert = 'n_row';
                         $this->insert($data, $typeInsert);
                     }
