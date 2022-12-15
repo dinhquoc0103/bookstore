@@ -40,7 +40,8 @@ RewriteRule     "^search/page-([1-9]+)/keyword=([A-Za-z0-9\+\S]+)(/?)$"     inde
 RewriteRule     "^check-out(/?)$"     index.php?module=site&controller=cart&action=checkOut
 RewriteRule     "^order-complete(/?)$"     index.php?module=site&controller=cart&action=orderComplete
 
-ErrorDocument 404 https://bookkg.herokuapp.com/
+; ErrorDocument 404 https://bookkg.herokuapp.com/
+ErrorDocument 404 https://bookstore-production-5830.up.railway.app/
 
 
 
